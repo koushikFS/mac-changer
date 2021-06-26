@@ -15,7 +15,7 @@ def get_arguments():
 
 def mac_changer(x, y):
     try:
-        print("Macchanger coded by @koushikk11")
+        print("Mac-changer coded by @koushikk11")
         print("[+]changing the mac-address of {a} to {b}".format(a=x, b=y))
         subprocess.call(["ifconfig", x, "down"])
         subprocess.call(["ifconfig", x, "hw", "ether", y])

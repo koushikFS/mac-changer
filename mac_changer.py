@@ -5,8 +5,8 @@ import re
 
 def get_arguments():
     arguments = optparse.OptionParser()
-    arguments.add_option("-i", "--interface", dest="interface", help="interface")
-    arguments.add_option("--mac", "-m", dest="new_mac", help="spoof mac address")
+    arguments.add_option("-i", "--interface", metavar='\b', dest="interface", help="interface")
+    arguments.add_option("--mac", "-m", metavar='\b', dest="new_mac", help="spoof mac address")
     (values, option) = arguments.parse_args()
     if not (values.interface and values.new_mac):
         arguments.error("give arguments\n[+]HELP: python3 macchanger.py -h")

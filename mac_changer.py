@@ -15,6 +15,7 @@ def get_arguments():
 
 def mac_changer(x, y):
     try:
+        print("coded by @koushikk11")
         print("[+]changing the mac-address of {a} to {b}".format(a=x, b=y))
         subprocess.call(["ifconfig", x, "down"])
         subprocess.call(["ifconfig", x, "hw", "ether", y])
@@ -35,14 +36,12 @@ def extract():
 
 def check(o, n):
     if o == n:
-	print("coded by @koushikk11")
-        print("[-]sry ur mac address is not changed")
+        print("[-]ur mac address is not changed")
         permanant_mac(values.interface)
         print("old mac:           {}".format(o))
         print("new mac:           {}".format(n))
 
     else:
-	print("coded by @koushikk11")
         print("[+]your mac address is successfully changed")
         permanant_mac(values.interface)
         print("old mac = {}".format(o))
